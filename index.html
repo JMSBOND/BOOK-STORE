@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+<body>
+{% block content %}
+<form method="post" action="/add">
+    {% csrf_token %}
+
+    <label>BookName</label>
+    <div>{{ form.bookname }}</div>
+    <label>Author</label>
+    <div>{{ form.author }}</div>
+    <label>Genre</label>
+    <div> {{ form.genre }}</div>
+    <label>Languages</label>
+    <div> {{ form.language }}</div>
+    <div>
+        <button class="btn btn-info" type="submit">Add</button>
+    </div>
+
+</form>
+
+{% endblock %}
+</body>
+
